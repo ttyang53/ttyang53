@@ -1,0 +1,21 @@
+<div class="booklist-main">
+    <div class="index-title">
+        <i class="fa fa-arrow-left exit" onClick="javascript: history.go(-1);"></i>
+        馆主推荐
+    </div>
+    <div class="booklist">
+        <div ng-show="kongbai" class="booklistTishi">此分类暂时没有图书</div>
+        <a class="bookClass" ng-repeat="item in bookInfoList" ng-href="#/details?id={{item.Book.Id}}">
+            <div class="bookClass-left"><img src="{{item.Book.Image}}"/></div>
+            <div class="bookClass-mid">
+                <p>{{item.Book.Name}}</p>
+                <p>{{item.Book.Author.Name}}</p>
+                <p>{{item.Book.PublishDate}}</p>
+                <p>{{item.Book.Publisher.Name}}</p>
+            </div>
+            <i class="fa fa-angle-right bookClass-right"></i>
+        </a>
+    </div>
+
+
+</div>

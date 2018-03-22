@@ -1,0 +1,40 @@
+.submit-main{
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.submit-content{
+    text-align: center;
+    padding-top: 20px;
+}
+.submit-content div{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4095D5;
+}
+.submit-content i{
+    font-size: 25px;
+    color: #4095D5;
+}
+.submit-content input{
+    outline: none;
+    width: 85%;
+    border: 0;
+    padding-left: 15px;
+}
+
+.submit-main button{
+    width: 90%;
+    height: 40px;
+    color: white;
+    background-color: #4095D5;
+    border: 0;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}

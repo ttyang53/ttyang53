@@ -1,0 +1,125 @@
+<div class="bookOrder">
+    <tty-dialog title="提示" content="收货成功" state="state"></tty-dialog>
+    <tty-dialog title="提示" content="订单还未配送" state="state2"></tty-dialog>
+    <tty-dialog title="提示" content="已成功取消订单" state="state3"></tty-dialog>
+    <div class="index-title">
+        <i class="fa fa-arrow-left exit" onClick="javascript: history.go(-1);"></i>
+        我的订单
+    </div>
+
+    <div class="bookOrder-main">
+        <div class="order-top">
+            <a ng-click="allOrder()" ng-class="{orderNav:!show}">全部</a>
+            <a ng-click="daishouhuo()" ng-class="{orderNav:show2}">待收货</a>
+            <a ng-click="yishouhuo()" ng-class="{orderNav:show3}">已收货</a>
+            <a ng-click="orderHistory()" ng-class="{orderNav:show4}">历史记录</a>
+        </div>
+        <hr/>
+
+        <!--全部-->
+        <div class="order-mid" ng-if="!show">
+            <div class="orderList" ng-repeat="item in allOrderData">
+                <div class="orderListDiv1">
+                    <!--<span>ss</span>-->
+                    <div><span>订单号：</span><span>{{item.BookNumber}}</span></div>
+                    <span class="bookzhuangtai">{{getzhuangtai(item.State)}}</span>
+                </div>
+                <a class="orderA">
+                    <img src="{{item.BookImage}}"/>
+                    <div class="order-text">
+                        <p>{{item.BookName}}</p>
+                        <p>{{item.AuthorName}}</p>
+                        <p>{{item.PublisherName}}</p>
+                    </div>
+                    <a class="fa fa-angle-right orderClass-right" href="#/details?id={{item.BookId}}"></a>
+                </a>
+                <div class="orderListDiv2">
+                    <div ng-click="confirmRreceipt(item.Id)">{{getzhuangtai2(item.State)}}</div>
+                    <div ng-if="aa" ng-click="btncancelOrder(item.Id)">取消订单</div>
+                </div>
+            </div>
+        </div>
+
+        <!--待收货-->
+        <div class="order-mid" ng-if="show2">
+            <div class="orderList" ng-repeat="item in daishouhuoBookOrder">
+                <div></div>
+                <div class="orderListDiv1">
+                    <!--<span>ss</span>-->
+                    <div><span>订单号：</span><span>{{item.BookNumber}}</span></div>
+                    <span class="bookzhuangtai">{{getzhuangtai(item.State)}}</span>
+                </div>
+                <a class="orderA">
+                    <img src="{{item.BookImage}}"/>
+                    <div class="order-text">
+                        <p>{{item.BookName}}</p>
+                        <p>{{item.AuthorName}}</p>
+                        <p>{{item.PublisherName}}</p>
+                    </div>
+                    <a class="fa fa-angle-right orderClass-right" href="#/details?id={{item.BookId}}"></a>
+                </a>
+                <div class="orderListDiv2">
+                    <div ng-click="confirmRreceipt(item.Id)">{{getzhuangtai2(item.State)}}</div>
+                    <div ng-if="aa">取消订单</div>
+                </div>
+            </div>
+        </div>
+
+        <!--已收货-->
+        <div class="order-mid" ng-if="show3">
+            <div class="orderList" ng-repeat="item in yishouhuoBookOrder">
+                <div></div>
+                <div class="orderListDiv1">
+                    <!--<span>ss</span>-->
+                    <div><span>订单号：</span><span>{{item.BookNumber}}</span></div>
+                    <span class="bookzhuangtai">{{getzhuangtai(item.State)}}</span>
+                </div>
+                <a class="orderA">
+                    <img src="{{item.BookImage}}"/>
+                    <div class="order-text">
+                        <p>{{item.BookName}}</p>
+                        <p>{{item.AuthorName}}</p>
+                        <p>{{item.PublisherName}}</p>
+                    </div>
+                    <a class="fa fa-angle-right orderClass-right" href="#/details?id={{item.BookId}}"></a>
+
+                </a>
+                <div class="orderListDiv2">
+                    <div ng-click="confirmRreceipt(item.Id)">{{getzhuangtai2(item.State)}}</div>
+                    <div ng-if="aa">取消订单</div>
+                </div>
+            </div>
+        </div>
+
+        <!--历史记录-->
+        <div class="order-mid" ng-if="show4">
+            <div class="orderList" ng-repeat="item in BookHistoryOrder">
+                <div></div>
+                <div class="orderListDiv1">
+                    <!--<span>ss</span>-->
+                    <div><span>订单号：</span><span>{{item.BookNumber}}</span></div>
+                    <span class="bookzhuangtai">{{getzhuangtai(item.State)}}</span>
+                </div>
+                <a class="orderA">
+                    <img src="{{item.BookImage}}"/>
+                    <div class="order-text">
+                        <p>{{item.BookName}}</p>
+                        <p>{{item.AuthorName}}</p>
+                        <p>{{item.PublisherName}}</p>
+                    </div>
+                    <a class="fa fa-angle-right orderClass-right" href="#/details?id={{item.BookId}}"></a>
+
+                </a>
+                <div class="orderListDiv2">
+                    <div ng-click="confirmRreceipt(item.Id)">{{getzhuangtai2(item.State)}}</div>
+                    <div ng-if="aa">取消订单</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div></div>
+    </div>
+
+</div>

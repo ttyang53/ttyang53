@@ -1,0 +1,21 @@
+<div class="search-main">
+    <div class="index-title">
+        <i class="fa fa-arrow-left exit" onClick="javascript: history.go(-1);"></i>
+        <input type="text" class="search-title" ng-model="keyword" placeholder="请输入图书的名称/ISBN"/>
+        <i class="fa fa-search search-icon" ng-click="search()"></i>
+    </div>
+
+
+    <div class="search-content">
+        <div class="search-history">搜索历史
+            <i class="fa fa-trash delete" ng-click="clear()"></i>
+        </div>
+        <div class="search-recommend">
+            <a href="#">论语全书</a>
+            <a href="#">三国</a>
+            <a href="#">javaScript</a>
+            <p ng-repeat="item in keywordArray">{{item}}</p>
+        </div>
+
+    </div>
+</div>

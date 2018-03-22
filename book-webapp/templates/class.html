@@ -1,0 +1,12 @@
+<div class="class-main">
+    <div class="index-title">分类</div>
+
+    <div class="class-content">
+        <a ng-repeat="item in bookClassList" href="#/bookList?categoryId={{item.Id}}">
+            <img src="{{item.Image}}" alt=""/>
+            <span>{{item.Name}}</span>
+        </a>
+    </div>
+
+    <tty-navs></tty-navs>
+</div>

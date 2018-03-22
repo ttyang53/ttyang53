@@ -1,0 +1,36 @@
+<div class="login-main">
+    <tty-dialog title="提示" content="登录失败" state="state"></tty-dialog>
+    <div class="index-title">登录
+        <i class="fa fa-arrow-left exit" onClick="javascript: history.go(-1);"></i>
+    </div>
+    <div class="login-content">
+        <form name="myForm" novalidate>
+            <div>
+                <i class="fa fa-user-o"></i>
+                <input type="text" placeholder="请输入账号" name="phone" ng-model="account.userPhone" required pattern="1[35789]\d{9}"/>
+                <span ng-show="myForm.phone.$pristine">请输入手机号码</span>
+                <span ng-show="myForm.phone.$dirty && myForm.phone.$error.required">手机号码不能为空</span>
+                <span ng-show="myForm.phone.$dirty && myForm.phone.$error.pattern">手机号码格式不正确</span>
+                <!--<span>ssss</span>-->
+            </div>
+            <div>
+                <i class="fa fa-unlock-alt"></i>
+                <input type="password" placeholder="请输入密码" name="pwd" required ng-model="account.userPassword"/>
+                <span ng-show="myForm.pwd.$dirty && myForm.pwd.$error.required">密码不能为空</span>
+            </div>
+
+            <a href="#/resetPassword" href="#/submit">忘记密码</a>
+
+            <button ng-click="btnLogin()" type="submit"   ng-disabled="myForm.$invalid" >登录</button>
+
+        </form>
+        <span id="youqingtishi">
+            友情提示：<br>
+            &nbsp;&nbsp;&nbsp;1、登录凭证需到市图书馆或各区分馆办理.<br>
+            &nbsp;&nbsp;&nbsp;2、办理借书业务时，需要携带身份证.<br>
+            &nbsp;&nbsp;&nbsp;3、......
+
+        </span>
+
+    </div>
+</div>

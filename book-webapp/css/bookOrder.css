@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    margin: 0;
+    position: relative;
+    border: 5px solid #ccc;
+}
+.bookOrder-main{
+    position: absolute;
+    top: 48px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.order-top{
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+.order-top a{
+    display: inline-block;
+    float: left;
+    height: 40px;
+    width: 25%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+}
+.order-mid{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+
+/*-----------------------------------------------------*/
+
+.orderListDiv1 span:nth-child(1){
+    float: left;
+}
+.orderListDiv1 div{
+    float: left;
+    line-height: 40px;
+}
+.orderListDiv2 div{
+    color: white;
+    float: right;
+    height: 30px;
+    width: 80px;
+    margin-right: 5px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+.orderListDiv2 div:nth-child(1){
+    background-color: #ff8800;
+}
+.orderListDiv2 div:nth-child(2){
+    background-color: #4095D5;
+}
+
+.bookzhuangtai{
+    float: right;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: red;
+}
+
+.orderList{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    top: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.orderListDiv1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc;
+}
+.orderListDiv2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    padding: 0 20px;
+}
+.orderA{
+    position: absolute;
+    top: 40px;
+    display: block;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+}
+.order-mid img{
+    float: left;
+    display: block;
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid;
+}
+#bookClass-right{
+    display: block;
+    float: right;
+    height: 100px;
+    width: 45px;
+    right: 0;
+    line-height: 100px;
+    font-size: 25px;
+    text-align: center;
+ }
+.orderClass-right{
+    position: absolute;
+    right: 0;
+    width: 45px;
+    top: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 100px;
+}
+.order-text{
+    float: left;
+    height: 100%;
+    margin: 10px 0 0 20px;
+}
+.order-text p{
+    margin-top: 0;
+}
+.orderNav{
+     box-sizing: border-box;
+     border-bottom: 2px solid #4095D5;
+ }

@@ -1,0 +1,54 @@
+<div class="mine">
+    <div class="index-title">我的</div>
+
+    <div class="min-top">
+        <a class="header" ng-click="loginGo()">
+            <img ng-if="img" ng-src="{{header.Header}}" />
+        </a>
+        <div ng-if="isLogin" class="text">
+            <h5>{{header.Name}}</h5>
+        </div>
+        <h5 ng-if="!isLogin">尚未登录</h5>
+
+    </div>
+    <!--<div class="min-top" ng-show="loginSuccess">-->
+    <!--</div>-->
+    <div class="min-mid">
+        <div ng-click="mineMyBookRack()">
+            <i class="fa fa-paper-plane-o mid-i1" ></i>
+            我的借书架
+            <i class="fa fa-angle-right mid-i2" aria-hidden="true"></i>
+        </div>
+        <div ng-click="minMyBookOrder()">
+            <i class="fa fa-book mid-i1" ></i>
+            我的借阅
+            <i class="fa fa-angle-right mid-i2" aria-hidden="true"></i>
+        </div>
+        <div>
+            <i class="fa fa-map-marker mid-i1"></i>
+            管理地址
+            <i class="fa fa-angle-right mid-i2" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="min-mid2">
+        <div>
+            <i class="fa fa-file-text-o mid-i1" ></i>
+            软件反馈
+            <i class="fa fa-angle-right mid-i2" aria-hidden="true"></i>
+        </div>
+        <div>
+            <i class="fa fa-twitch mid-i1" ></i>
+            常见问题
+            <i class="fa fa-angle-right mid-i2" aria-hidden="true"></i>
+        </div>
+        <div>
+            <i class="fa fa-twitch mid-i1"></i>
+            关于软件
+            <i class="fa fa-angle-right mid-i2" aria-hidden="true"></i>
+        </div>
+    </div>
+
+
+    <tty-navs></tty-navs>
+</div>

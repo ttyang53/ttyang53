@@ -1,0 +1,44 @@
+<div>
+    <div>
+        <div class="index-title">
+            <a class="home-title" href="#/search">
+                <i class="fa fa-search"></i>
+                请输入图书的名称/ISBN
+            </a>
+        </div>
+
+        <div class="home">
+            <!--轮播图-->
+            <div class="lbCarousel">
+                <div class="lbCarouselDiv">
+                    <div ng-repeat="item in carousel"> <img src="{{item.Image}}"/></div>
+                </div>
+                <!--浮标-->
+                <!--<div class="buoy">-->
+                    <!--<div class="buoyDiv">-->
+                        <!--<div ng-repeat="item in carousel"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            </div>
+            <!--内容-->
+            <div class="home-mian" >
+            <div class="home-11" ng-repeat="item in bookLanmuList">
+                <div class="home-newbook">
+                    <span>{{item.Name}}</span>
+                    <a class="fa fa-angle-right" ng-href="#/bookList?sectionId={{bookLanmuList[0].Id}}"></a>
+                </div>
+                <div class="home-content" >
+                    <a ng-href="#/details?id={{item.Book.Id}}" ng-repeat="item in booksList">
+                        <img src="{{item.Book.Image}}"/>
+                        <span>{{item.Book.Name}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <tty-navs></tty-navs>
+    </div>
+    <!--<tty-booklist ng-show="booklistShow"></tty-booklist>-->
+
+</div>

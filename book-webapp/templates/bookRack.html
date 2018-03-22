@@ -1,0 +1,35 @@
+<div class="bookRack">
+    <tty-dialog title="提示" content="提交订单成功" state="state"></tty-dialog>
+    <div class="index-title">
+        <i class="fa fa-arrow-left exit" onClick="javascript: history.go(-1);"></i>
+        我的借书架
+        <span>编辑<i class="fa fa-pencil-square-o"></i></span>
+    </div>
+
+    <div class="book-content">
+        <!--href="#/details?id={{item.Book.Id}}"-->
+        <a ng-repeat="item in myBookRack" ng-click="bookRackUrl(item.Book.Id,$event)">
+            <div class="bookRack-left"><img src="{{item.Book.Image}}"/></div>
+            <div class="bookRack-mid">
+                <p>{{item.Book.Name}}</p>
+                <p>{{item.Book.Author.Name}}</p>
+                <p>{{item.Book.PublishDate}}</p>
+                <p>{{item.Book.Publisher.Name}}</p>
+            </div>
+            <div id="bookRack-delete">
+                <i class="fa fa-trash-o bookRack-delete" ng-click="deleteBookRack(item.Book.Id)"></i>
+                <i class="fa fa-angle-right bookRack-right"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="book-bd">
+        <div>
+            <!--<input type="checkbox"/>-->
+            <!--<label>全选</label>-->
+            合计<spna>1</spna>本
+        </div>
+        <div ng-click="submitOrder()">提交订单</div>
+    </div>
+</div>

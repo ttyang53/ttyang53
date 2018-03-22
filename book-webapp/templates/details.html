@@ -1,0 +1,38 @@
+<div class="details">
+    <tty-dialog title="提示" content="已成功加入书架" state="state"></tty-dialog>
+    <div class="index-title">
+        <i class="fa fa-arrow-left exit" onClick="javascript: history.go(-1);"></i>
+        图书详情
+    </div>
+    <div class="details-main">
+        <div><img src="{{detailsList.Book.Image}}" alt="" class="details-img"/></div>
+        <div class="details-title">{{detailsList.Book.Name}}</div>
+        <div class="details-content">
+            <div>
+                <label>作者：</label>
+                <span class="author">{{detailsList.Book.Author.Name}}</span>
+            </div>
+            <div>
+                <label>出版社：</label>
+                <span class="press">{{detailsList.Book.Publisher.Name}}</span>
+            </div>
+            <div>
+                <label>出版时间：</label>
+                <span class="presstime">{{detailsList.Book.PublishDate}}</span>
+            </div>
+            <div>
+                <label>剩余数量：</label>
+                <span class="nub">{{detailsList.Book.Amount}}</span>
+            </div>
+        </div>
+        <div class="details-title">简介</div>
+        <span class="details-describe">{{detailsList.Book.Introduce}}</span>
+
+    </div>
+
+    <div class="details-bd">
+        <div><a class="fa fa-book details-icon" ng-click="btnBookRack()"></a>借书架</div>
+        <div ng-click="addBookRack()">加入借书架</div>
+    </div>
+
+</div>
